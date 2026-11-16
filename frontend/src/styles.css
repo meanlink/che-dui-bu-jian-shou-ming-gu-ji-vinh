@@ -3,3 +3,48 @@ body[data-style*=lab]{--paper:oklch(96% .012 140);--surface:oklch(98% .008 140);
 @media(min-width:1600px){main{padding:45px 65px}.shell{grid-template-columns:270px minmax(0,1fr)}}
 @media(max-width:1100px){.shell{grid-template-columns:206px minmax(0,1fr)}aside{padding:25px 18px}header{padding:0 25px}main{padding:26px 25px}footer{margin:0 25px}.brand{font-size:17px}.overview-hero{gap:20px;padding:24px}.numbers{padding-left:18px;gap:18px}.two-columns{gap:25px}.result-selector{flex-wrap:wrap}.dataset-grid,.report-grid{gap:25px;grid-template-columns:1fr 1.4fr}.workbench-grid{gap:25px}.login-story{padding:45px}.login-form{padding:40px}.timeline li{display:block}.timeline span{display:block;margin-top:5px}}
 @media(max-width:767px){.shell{display:block}aside{position:static;min-height:0;height:auto;padding:20px}.brand{flex-direction:row;align-items:center;font-size:18px}.brand-symbol{width:30px;height:30px}.edition,.aside-note,.account{display:none}nav{flex-direction:row;overflow:auto;margin-top:18px;gap:3px}nav a{padding:10px;white-space:nowrap;font-size:11px}nav a small{display:none}header{height:42px;padding:0 20px}header>span:first-child{max-width:65%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}header .live-dot{font-size:9px}main{padding:24px 20px}.page-heading{display:block}.page-heading>.button{margin-top:15px}.overview-hero{grid-template-columns:1fr;padding:20px}.numbers{border-left:0;border-top:1px solid var(--line);padding:18px 0 0;grid-template-columns:repeat(4,1fr);gap:10px}.numbers strong{font-size:25px}.numbers span{font-size:9px}.two-columns,.dataset-grid,.workbench-grid,.report-grid{grid-template-columns:1fr;gap:20px}.section-title span{max-width:55%}.metrics{gap:20px}.metrics strong{font-size:23px}.result-selector>span{font-size:10px}.result-lead h2{font-size:21px}.method-sheet{padding:22px}.login-scene{display:block}.login-story{padding:70px 30px 30px}.login-story>.edition{top:25px}.login-story h1{font-size:40px}.flow-lines{display:none}.login-foot{margin-top:20px}.login-form{padding:35px 30px;max-width:none}.login-form h2{font-size:28px}footer{margin:0 20px;font-size:8px}.delivery{align-items:flex-start;flex-direction:column}body[data-style*=press] .overview-hero{grid-template-columns:1fr}body[data-style*=press] .narrative{order:0}body[data-style*=press] .numbers{border-right:0;padding:18px 0 0}}
+/* 各站检修指令 */
+.station-summary{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:28px}
+.station-summary>div{background:var(--surface);padding:18px 22px;display:flex;flex-direction:column;gap:7px}
+.station-summary span{font-size:10px;color:var(--muted)}
+.station-summary strong{font-family:'Noto Serif SC',serif;font-size:22px;font-weight:500}
+.station-grid{display:grid;grid-template-columns:.75fr 1.6fr;gap:38px;align-items:start}
+.station-grid>.panel{margin-top:0}
+.station-list{display:flex;flex-direction:column;gap:18px}
+.station-card{border:1px solid var(--line);border-top:3px solid var(--accent);background:var(--surface);padding:20px 22px}
+.station-card.status-offline,.station-card.status-disabled{border-top-color:var(--muted)}
+.station-card.status-withdrawing,.station-card.status-drift{border-top-color:oklch(63% .13 75)}
+.station-card header{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:15px}
+.station-card header>div{display:flex;flex-direction:column;gap:4px}
+.station-card header strong{font-size:15px;font-weight:600}
+.station-card header span:not(.status){font-size:10px;color:var(--muted)}
+.two-sided{display:grid;grid-template-columns:1fr 1fr;gap:18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:15px 0}
+.two-sided>*{min-width:0}
+.version{display:inline-block;border:1px solid var(--ink);padding:2px 9px;margin-left:5px;font-size:11px;font-weight:600}
+.version.none{border-style:dashed;color:var(--muted);font-weight:400}
+.snapshot{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;margin-top:11px;font-size:10px;color:var(--muted)}
+.snapshot strong{color:var(--ink);font-weight:500}
+.pending-line{border-left:2px solid oklch(63% .13 75);padding:10px 14px;margin:14px 0;background:oklch(94% .035 85);display:flex;flex-direction:column;gap:5px;font-size:11px}
+.pending-line strong{font-weight:600;font-size:10px;letter-spacing:.1em;color:oklch(48% .12 70)}
+.pending-line span{color:var(--muted)}
+.hint.ok{color:var(--accent)}
+.flag.lost{display:inline-block;margin-left:7px;font-size:9px;border:1px solid oklch(63% .13 75);color:oklch(48% .12 70);padding:1px 6px}
+.station-drill{display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:14px 0 4px;border-top:1px dashed var(--line)}
+.drill-switches{display:flex;flex-wrap:wrap;align-items:center;gap:14px;flex:1}
+.drill-switches>.eyebrow{margin:0}
+.drill-switches .hint{margin:0}
+.switch{flex-direction:row;align-items:center;gap:6px;margin:0;font-size:11px;color:var(--muted)}
+.switch input{width:auto;accent-color:var(--accent)}
+.station-actions{display:flex;gap:9px}
+.directive-log{margin-top:12px;border-top:1px solid var(--line);padding-top:10px}
+.directive-log summary{font-size:10px;letter-spacing:.1em;color:var(--muted);cursor:pointer}
+.directive-log table{margin-top:10px}
+.directive-log .table-wrap{max-height:260px}
+.status.effective:before,.status.in_sync:before{background:var(--accent)}
+.status.superseded:before,.status.revoked:before,.status.noop:before{background:var(--muted)}
+.status.pending:before,.status.retrying:before,.status.receipt_lost:before,.status.withdrawing:before,.status.awaiting_receipt:before{background:oklch(63% .13 75)}
+.status.offline:before,.status.disabled:before,.status.failed:before,.status.blocked:before{background:oklch(48% .15 30)}
+@media(max-width:1100px){.station-grid{grid-template-columns:1fr 1.5fr;gap:25px}.two-sided{grid-template-columns:1fr}}
+@media(max-width:767px){.station-grid{grid-template-columns:1fr}.station-summary{grid-template-columns:1fr 1fr}.station-drill{flex-direction:column;align-items:flex-start}}
+.pending-line .pending-actions{display:inline-flex;gap:16px;margin-left:4px}
+.pending-line .pending-actions .text-button{font-size:10px;color:var(--ink)}
